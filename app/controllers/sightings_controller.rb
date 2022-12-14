@@ -15,7 +15,7 @@ class SightingsController < ApplicationController
         if sighting.valid?
             render json: sighting
         else
-            render json: sighting.errors
+            render json: sighting.errors, status: :unprocessable_entity
         end
     end
 
@@ -25,7 +25,7 @@ class SightingsController < ApplicationController
         if sighting.valid?
             render json: sighting
         else
-            render json: sighting.errors
+            render json: sighting.errors, status: :unprocessable_entity
         end
     end
 
